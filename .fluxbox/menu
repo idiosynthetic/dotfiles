@@ -1,0 +1,14 @@
+[begin] (#)
+[exec] (Chrome) {/usr/bin/google-chrome} </opt/google/chrome/product_logo_48.png>
+[exec] (Firefox) {/usr/bin/firefox} </usr/share/pixmaps/firefox.png>
+[exec] (VLC media player) {/usr/bin/qvlc} </usr/share/icons/hicolor/32x32/apps/vlc.xpm>
+[exec] (Rhythmbox) {/usr/bin/rhythmbox} </usr/share/pixmaps/rhythmbox-small.xpm>
+[exec] (File Manager) {/usr/bin/thunar} </usr/share/icons/gnome/32x32/apps/file-manager.png>
+[exec] (Terminal) {/usr/bin/terminator} </usr/share/pixmaps/terminator.png>
+[submenu] (fluxbox-menu) {}
+	[include] (/etc/X11/fluxbox/fluxbox-menu)
+[end]
+[separator]
+[exec] (Lock Screen) {/usr/bin/gnome-screensaver-command -l} <>
+[exec] (Shutdown) {shutdown-confirm} <>
+[end]

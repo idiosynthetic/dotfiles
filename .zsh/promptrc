@@ -1,0 +1,19 @@
+# -*- shell-script -*-
+
+# ANSI escapes for colors and attributes.
+Black='\e[30m'
+Blue='\e[34m'
+Green='\e[32m'
+Cyan='\e[36m'
+Red='\e[31m'
+Purple='\e[35m'
+Brown='\e[33m'
+Gray='\e[37m'
+Bold='\e[1m'
+Norm='\e[0m'
+
+# A rather boring prompt.
+export PS1="%m%# "
+
+# Something more interesting
+export PS1="[%n@%m %c]%# "

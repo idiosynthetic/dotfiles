@@ -1,0 +1,11 @@
+# -*- shell-script -*-
+
+# cd should only do directories (d'uh)
+#compctl -g '*(/)|.*(/)' cd
+# Various logical completions for programs
+#compctl -g '*.tex|*(/)' tex latex
+#compctl -g '*.dvi|*(/)' xdvi dvips
+#compctl -g '*.html|*(/)' appletviewer
+
+autoload -U compinit
+compinit

@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# Put this is file in /usr/local/bin/, and create /etc/sudoers.d/shutdown: 
+# <user> <host> = (root) NOPASSWD: /sbin/shutdown
+
+if xmessage -title Shutdown -nearmouse -buttons No:1,Yes:0 "Really shutdown the computer?"; then
+	sudo shutdown -P now
+fi
+

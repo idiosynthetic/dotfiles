@@ -1,0 +1,7 @@
+# -*- shell-script -*-
+
+# Useful.
+setopt autolist         # List possible completions
+setopt automenu         # But after that switch between possible
+setopt nonomatch        # nomatch is stupid and should be shot
+setopt nobeep           # beep is even worse and should be burned

@@ -1,0 +1,6 @@
+# -*- shell-script -*-
+
+## Make Things All Right
+#stty erase ^H
+
+bindkey -e

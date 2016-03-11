@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# sudo apt-get install dnsmasq
+# cp /etc/dnsmasq.conf /etc/dnsmasq.conf.default
+# Put this file in /usr/local/bin/, and create /etc/sudoers.d/unlocator: 
+# <user> <host> = (root) NOPASSWD: /usr/local/bin/unlocator
+# Then use: sudo unlocator <on|off>
+
+cp /etc/dnsmasq.conf.default /etc/dnsmasq.conf
+
+beta="server=/unlocator.com/209.177.145.30
+server=/netflix.com/209.177.145.30"
+
+main="server=/unlocator.com/185.37.37.37
+server=/unlocator.com/185.37.37.185
+server=/netflix.com/185.37.37.37
+server=/netflix.com/185.37.37.185"
+
+if [[ "$@" == "on" ]]
+then
+    echo "$beta" >> /etc/dnsmasq.conf
+fi
+
+service dnsmasq restart
+
