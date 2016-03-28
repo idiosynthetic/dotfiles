@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Create /etc/sudoers.d/nameserver: <user> <host> = (root) NOPASSWD: /usr/local/bin/nameserver
+
+default="nameserver 127.0.1.1"
+
+unlocator_beta="nameserver 209.177.145.30"
+
+unlocator="nameserver 185.37.37.37
+nameserver 185.37.37.185"
+
+if [[ "$@" == "unlocator" ]]
+then
+    echo "$unlocator_beta" > /run/resolvconf/interface/NetworkManager
+else
+    echo "$default" > /run/resolvconf/interface/NetworkManager
+fi
+
+resolvconf -u
+
