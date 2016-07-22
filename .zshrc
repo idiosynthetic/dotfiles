@@ -25,16 +25,3 @@ PS1="[%{$fg[blue]%}%n%{$fg[red]%}@%{$fg[green]%}%m%{$reset_color%}:%{$fg[cyan]%}
 
 eval $(dircolors -b ~/.dircolors-solarized-ansi-light)
 
-case $TERM in
-    xterm*)
-        precmd() {print -Pn "\e]0;%n@%m: %~\a"}
-		ssh() {
-			print -Pn "\e]0;$@\a";
-			/usr/bin/ssh "$@";
-			print -Pn "\e]0;%n@%m: %~\a";
-		}
-        ;;
-esac
-
-export PATH=$PATH:/home/steve/workspace/flex-sdk/bin
-
